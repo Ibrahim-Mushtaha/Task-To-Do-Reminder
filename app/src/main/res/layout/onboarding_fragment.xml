@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="com.example.todolist.ui.fragment.OnboardingFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_image1"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="Reminders made simple"
+            android:textAppearance="@style/main_text_style"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur \nadipiscing elit.Mauris pellentesque erat \nin blandit luctus."
+            android:textAlignment="center"
+            android:textColor="#82A0B7"
+            android:textSize="17dp"
+            android:layout_below="@id/textView"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <Button
+            android:id="@+id/btn_get_start"
+            android:layout_width="258dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/btn_get_started"
+            android:shadowColor="#66C81C"
+            android:shadowDx="2"
+            android:shadowDy="10"
+            android:text="Get Started"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textView2" />
+    </RelativeLayout>
+</layout>

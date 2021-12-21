@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todolist.ui.fragment.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_addTask"
+            app:destination="@id/addTask" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.todolist.ui.fragment.type.TaskFragment"
+        android:label="Task"
+        tools:layout="@layout/task_fragment" >
+        <action
+            android:id="@+id/action_taskFragment_to_selectedTypeFragment"
+            app:destination="@id/selectedTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTask"
+        android:name="com.example.todolist.ui.fragment.AddTask"
+        android:label="Add  Task"
+        tools:layout="@layout/add_task_fragment">
+        <action
+            android:id="@+id/action_addTask_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.ix.ibrahim7.todolist.model.Task" />
+        <action
+            android:id="@+id/action_addTask_to_finsihedTaskFragment"
+            app:destination="@id/finsihedTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedTypeFragment"
+        android:name="com.example.todolist.ui.fragment.type.SelectedTypeFragment"
+        android:label="selected_type_fragment"
+        tools:layout="@layout/selected_type_fragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectedTypeFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finsihedTaskFragment"
+        android:name="com.example.todolist.ui.fragment.FinsihedTaskFragment"
+        android:label="Completed Tasks"
+        tools:layout="@layout/fragment_finsihed_task" >
+        <action
+            android:id="@+id/action_finsihedTaskFragment_to_addTask"
+            app:destination="@id/addTask" />
+    </fragment>
+</navigation>
